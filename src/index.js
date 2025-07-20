@@ -8,8 +8,24 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-export default {
+
+let index_default={
 	async fetch(request, env, ctx) {
-		return new Response('HelloHello World!');
-	},
+		const html = `
+		<html>
+		<body>
+		<h1>Hello! Hello! World!</h1>
+		</body>
+		</html>`;
+		
+		return new Response(html , {
+			headers: {
+				'content-type': 'text/html',
+			}
+		});
+	}
+}
+
+export default {
+	index_default as default
 };

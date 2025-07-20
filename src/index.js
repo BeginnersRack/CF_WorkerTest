@@ -9,23 +9,20 @@
  */
 
 
-let index_default={
+var index_default={
 	async fetch(request, env, ctx) {
-		const html = `
-		<html>
-		<body>
+		const html = `<html><body>
 		<h1>Hello! Hello! World!</h1>
-		</body>
-		</html>`;
+		</body></html>`;
 		
 		return new Response(html , {
 			headers: {
 				'content-type': 'text/html',
-			}
+			},
 		});
 	}
-}
+};
 
-export default {
+export {
 	index_default as default
 };

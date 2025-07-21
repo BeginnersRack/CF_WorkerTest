@@ -12,7 +12,7 @@
 var index_default={
 	async fetch(request, env, ctx) {
 		const html = `<html><body>
-		<h1>Hello! Hello! World!</h1>
+		<h1>Hello! Hello! World! GOGO!</h1>
 		</body></html>`;
 		
 		return new Response(html , {
